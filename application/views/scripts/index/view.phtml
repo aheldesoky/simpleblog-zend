@@ -1,0 +1,23 @@
+<?php $post = $this->post; ?>
+<div class="post">
+	<input id="post_id" type="hidden" value="<?=$post['id']?>">
+	<div class="title">[ <a href="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/index/edit/id/<?=$post['id']?>">Edit</a> - <a href="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/index/delete/id/<?=$post['id']?>">Delete</a> ]</div>
+	<div class="title"><h1><?=$post['title']?></h1></div>
+	<div class="date">Last updated on : <?=$post['post_date']?></div>
+	<div class="name">By : <?=$post['name']?></div>
+	<div class="description"><p><?=$post['description']?></p></div>
+	<div><a class="view-comments" href="#">View Comments</a></div>
+	<div class="comments">
+		<h1 class="h2 comments-title">Comments (<?=count($this->comments)?>)</h1>
+		<?php foreach ($this->comments as $comment){?>
+		<div class="comment box">
+			<input id="comment_id" type="hidden" value="<?=$comment['comment_id']?>">
+			<div class="comment-body"><?=$comment['comment']?></div>
+			<div class="date">Last updated on: <?=$comment['comment_date']?></div>
+			<div class="name">By: <?=$comment['commenter']?></div>
+			<div class="email">Email: <?=$comment['email']?></div>
+		</div>
+		<?php }?>
+	</div>
+	<div class="commentForm"><?=$this->commentForm;?></div>
+</div>

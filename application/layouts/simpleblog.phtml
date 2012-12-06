@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Simple Blog with Zend Framework</title>
+	<link rel="shortcut icon" href="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/images/icons/favicon.ico" />
+	<link rel="stylesheet" href="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/css/style.css" type="text/css" />
+	<script type="text/javascript" src="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/js/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/js/main.js"></script>	
+</head>
+<body>
+	<div class="wrap">
+		<div id="header">
+			<p id="options"><a href="#">Login</a><a href="#">About</a><a href="#">Contact</a></p>
+			<h1><a href="#">Simple Blog with Zend Framework</a></h1>
+			<ul id="menu">
+				<li><a href="<?php echo Zend_Registry::get('config')->url_path;?>">Home</a></li>
+				<li><a href="#">Topics</a></li>
+				<li><a href="#">Advanced Search</a></li>
+				<li><a href="#">My Wiki</a></li>
+				<li><a href="#">My Profile</a></li>
+			</ul>
+			
+		<div class="clear"></div>
+			
+		</div>
+		<div id="content">
+			<div id="left">
+				<?php echo $this->layout ()->content; ?>
+			</div>
+			<div id="right">
+				<div class="box">
+					<h3>About Zend Framework</h3>
+					<p>Etiam blandit ultricies nisl. Nullam dapibus, mauris id scelerisque feugiat, sapien augue porta ipsum, ut blandit tellus enim vel mauris. Praesent accumsan metus vel ipsum. Maecenas aliquam blandit mi. Pellentesque dolor magna, posuere vel, condimentum id, accumsan ac, diam. Phasellus vel leo.</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="wrap">
+			<ul>
+				<li><a href="#">Topics</a></li>
+				<li><a href="#">Advanced Search</a></li>
+				<li><a href="#">My Wiki</a></li>
+				<li><a href="#">My Profile</a></li>
+			</ul>
+			<div id="col">
+				<p>Aenean velit nisl, hendrerit eget, rutrum quis, lobortis nec, libero. Nulla venenatis, turpis eu vestibulum tincidunt, felis diam luctus velit, facilisis cursus mi ligula vitae nunc. Curabitur libero. Fusce felis. Nam gravida nulla non eros. Donec non nisl. Nulla ut odio. Curabitur sollicitudin nonummy est. Nullam molestie lectus.</p>
+				<p id="copyright">Developed by: Ahmed Eldesouky, <a title="Awsome Web Templates" href="http://aheldesoky.blogspot.com/" target="_blank">aheldesoky</a></p>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+		</div>
+		<noscript>&lt;p class="center"&gt;This blog requires JavaScript.&lt;/p&gt;</noscript>
+	</div>
+</body>
+</html>

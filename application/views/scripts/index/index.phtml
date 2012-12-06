@@ -1,0 +1,13 @@
+<div class=""><h1><a href="index/add">Add Post</a></h2></div>
+<?php if (count($this->paginator)): 
+			foreach($this->paginator as $post): ?>
+			<div class="post">
+				<input type="hidden" value="<?=$post['id']?>">
+				<h2><a href="<?php echo Zend_Registry::get ( 'config' )->url_path;?>/index/view/id/<?=$post['id']?>"><?=$post['title']?></a></h2>
+				<span class="name">By : <?=$post['name']?></span>
+				<span class="date">Last updated on : <?=$post['post_date']?></span>
+				<p><b><?php echo substr($post['description'], 0, 300);echo ' ...';?></b></p>
+			</div>
+<?php 		endforeach; ?>
+<?php endif; ?>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'partial/my_pagination_control.phtml'); ?>
